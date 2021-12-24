@@ -10,6 +10,7 @@ int g = 7;
 int h = 8;
 int i = 9;
 
+
 int max = a;
 
 if (b > max) max = b;

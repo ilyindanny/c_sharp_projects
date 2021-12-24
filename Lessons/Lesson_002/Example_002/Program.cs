@@ -11,6 +11,7 @@ int FindMaxMethod (int a, int b, int c)
     return result;
 }
 
+
 int max = FindMaxMethod(
     FindMaxMethod(array[0], array[1], array[2]), FindMaxMethod(array[3], array[4], array[5]), FindMaxMethod(array[6], array[7], array[8]));
 
