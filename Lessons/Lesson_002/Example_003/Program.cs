@@ -16,6 +16,8 @@ void FillArray(int[] NameArray)
 }
 
 
+// Method to print all numbers from array.
+
 void PrintArray(int[] NameArray)
 {
     int count = NameArray.Length;
@@ -28,6 +30,7 @@ void PrintArray(int[] NameArray)
     }
 }
 
+// Method to check my number in array.
 
 int IndexOf(int[] NameArray, int NumberWeFind)
 {
@@ -47,11 +50,18 @@ int IndexOf(int[] NameArray, int NumberWeFind)
     return position;
 }
 
+
+// Create array.
+
 int[] array = new int[10];
+
+// Input number you find.
+
 int NumberThatWeFind = 7;
 
-FillArray(array);
+// Use the methods.
 
+FillArray(array);
 PrintArray(array);
 
 Console.WriteLine();
