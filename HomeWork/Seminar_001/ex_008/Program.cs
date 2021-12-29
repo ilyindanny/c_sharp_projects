@@ -1,4 +1,4 @@
-﻿// is one a multiple of four?
+﻿// is the first a multiple of second?
 
 
 Console.WriteLine("input smaller digit: ");
