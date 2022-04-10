@@ -28,4 +28,4 @@ while (Distance > 10)
 }
 
 
-Console.WriteLine($"that is {count} times."); //$"{x} * {y} = {x * y}"
+Console.WriteLine($"that is {count} times.");           //  ($"{x} text")
