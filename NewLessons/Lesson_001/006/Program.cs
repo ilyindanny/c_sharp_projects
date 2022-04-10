@@ -29,26 +29,26 @@ int x = Ax, y = Ay;  //It's the first point to start. You can choose either poin
 
 int count = 0;
 
-while(count < 4000)
+while (count < 4000)
 {
-    int what = new Random().Next(0,3);
-    if(what == 0)
+    int RandomPoint = new Random().Next(0, 3);
+    if (RandomPoint == 0)
     {
         x = (x + Ax) / 2;
         y = (y + Ay) / 2;
     }
-    if(what == 1)
+    if (RandomPoint == 1)
     {
         x = (x + Bx) / 2;
         y = (y + By) / 2;
     }
-    if(what == 2)
+    if (RandomPoint == 2)
     {
         x = (x + Cx) / 2;
         y = (y + Cy) / 2;
-        
+
     }
-   
+
     Console.SetCursorPosition(x, y);
     Console.WriteLine("+");
     count++;
@@ -56,7 +56,7 @@ while(count < 4000)
 }
 
 int CountForSpace = 0;
-while(CountForSpace < 10)
+while (CountForSpace < 12)
 {
     Console.WriteLine(" ");
     CountForSpace++;
