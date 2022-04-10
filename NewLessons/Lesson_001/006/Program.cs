@@ -46,13 +46,11 @@ while (count < 4000)
     {
         x = (x + Cx) / 2;
         y = (y + Cy) / 2;
-
     }
 
     Console.SetCursorPosition(x, y);
     Console.WriteLine("+");
     count++;
-
 }
 
 int CountForSpace = 0;
