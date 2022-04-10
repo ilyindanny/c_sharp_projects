@@ -1,46 +1,54 @@
-﻿
+﻿// Triangle of Serpinsky
 
-Console.Clear();
 
 ///Console.SetCursorPosition(10, 4);
 ///Console.WriteLine("+");
 
 
-int xa = 30, ya = 1,
-    xb = 1, yb = 20,
-    xc = 60, yc = 20;
+Console.Clear();
 
 
-Console.SetCursorPosition(xa, ya);
+int Ax = 21, Ay = 1,
+    Bx = 1, By = 21,
+    Cx = 41, Cy = 21;
+
+
+/*
+
+Console.SetCursorPosition(Ax, Ay);
 Console.WriteLine("+");
-Console.SetCursorPosition(xb, yb);
+Console.SetCursorPosition(Bx, By);
 Console.WriteLine("+");
-Console.SetCursorPosition(xc, yc);
+Console.SetCursorPosition(Cx, Cy);
 Console.WriteLine("+");
 
-int x = xa, y = xb;
+*/
+
+
+int x = Ax, y = Ay;  //It's the first point to start. You can choose either point for that.
 
 int count = 0;
 
-while(count < 5000)
+while(count < 4000)
 {
     int what = new Random().Next(0,3);
     if(what == 0)
     {
-        x = (x + xa) / 2;
-        y = (y + ya) / 2;
+        x = (x + Ax) / 2;
+        y = (y + Ay) / 2;
     }
     if(what == 1)
     {
-        x = (x + xb) / 2;
-        y = (y + yb) / 2;
+        x = (x + Bx) / 2;
+        y = (y + By) / 2;
     }
     if(what == 2)
     {
-        x = (x + xc) / 2;
-        y = (y + yc) / 2;
+        x = (x + Cx) / 2;
+        y = (y + Cy) / 2;
         
     }
+   
     Console.SetCursorPosition(x, y);
     Console.WriteLine("+");
     count++;
