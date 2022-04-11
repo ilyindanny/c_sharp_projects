@@ -30,7 +30,7 @@ int ArrayElementsCounter = 0;
 
 while (ArrayElementsCounter < n)
 {
-    if (array [ArrayElementsCounter] == find)
+    if (array [ArrayElementsCounter] == FindSomeMyDigit)
     {
         Console.WriteLine(ArrayElementsCounter);
     }

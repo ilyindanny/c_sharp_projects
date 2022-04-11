@@ -4,7 +4,7 @@
 Console.WriteLine("input name");
 string username = Console.ReadLine();
 
-if(username.ToLower(            ) == "Victoria")
+if(username.ToLower() == "Victoria")
 {
     Console.WriteLine("Ura");
 
