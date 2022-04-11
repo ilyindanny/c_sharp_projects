@@ -15,7 +15,7 @@ int A = Didg % 10;
 int B = Didg / 10 % 10;
 int C = Didg / 100 % 10;
 
-int max = A
+int max = A;
 
 if (max < B) max = B;
 if (max < C) max = C;
