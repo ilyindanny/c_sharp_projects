@@ -15,6 +15,9 @@ int A = Didg % 10;
 int B = Didg / 10 % 10;
 int C = Didg / 100 % 10;
 
-WriteLine(A);
-WriteLine(B);
-WriteLine(C);
+int max = A
+
+if (max < B) max = B;
+if (max < C) max = C;
+
+WriteLine(max);
