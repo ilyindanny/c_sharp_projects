@@ -14,6 +14,6 @@ int D = 2;
 
 while (D <= N)
 {
-    WriteLine(D);
-    D+=2;
+	WriteLine(D);
+	D += 2;
 }
