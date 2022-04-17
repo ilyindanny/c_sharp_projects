@@ -48,7 +48,7 @@ Console.WriteLine(result002[resultLength - 2]);
 // the 4th way (if you wanna convert a string to an integer).
 
 
-int result03 = Convert.ToInt32(Console.ReadLine()[1].ToString());
+int result03 = Convert.ToInt32(Console.ReadLine()[1]);
 
 
 Console.WriteLine(result03);
