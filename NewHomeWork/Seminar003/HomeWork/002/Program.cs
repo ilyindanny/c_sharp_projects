@@ -28,4 +28,4 @@ double z2 = Convert.ToDouble(array[5]);
 
 double resoult = Math.Sqrt(Math.Pow(y2 - y1, 2) + Math.Pow(Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(z2 - z1, 2)), 2));
 
-Console.WriteLine(resoult);
+Console.WriteLine($"{resoult:N2}");
