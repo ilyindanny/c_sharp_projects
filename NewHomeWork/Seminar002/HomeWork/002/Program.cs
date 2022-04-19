@@ -21,7 +21,7 @@ using static System.Console;
 =======
 // if you wanna find out the third digit from tne beginning
 >>>>>>> e8b701ce284b450f04551d2885f30087992d9aba
-string result04 = Console.ReadLine();
+string result04 = Console.ReadLine() ?? "0";
 
 int length = result04.Length;
 
@@ -36,7 +36,7 @@ else
 // Alternative exercise. if you wanna find out the third digit from tne end.
 
 
-string result004 = Console.ReadLine();
+string result004 = Console.ReadLine() ?? "0";
 
 int length01 = result004.Length;
 

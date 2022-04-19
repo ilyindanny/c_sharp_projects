@@ -5,37 +5,37 @@
 
 Console.WriteLine("input number of day of week:");
 
-//string input = Console.ReadLine();
+//string input = Console.ReadLine() ?? "0";
 //int day = Int32.Parse(input);
 
 int day = Int32.Parse(Console.ReadLine());
 
-if(day == 1)
+if (day == 1)
 {
-    Console.WriteLine("Monday");
+	Console.WriteLine("Monday");
 }
-if(day == 2)
+if (day == 2)
 {
-    Console.WriteLine("Tuesday");
+	Console.WriteLine("Tuesday");
 }
-if(day == 3)
+if (day == 3)
 {
-    Console.WriteLine("Wednesday");
+	Console.WriteLine("Wednesday");
 }
-if(day == 4)
+if (day == 4)
 {
-    Console.WriteLine("Thursday");
+	Console.WriteLine("Thursday");
 }
-if(day == 5)
+if (day == 5)
 {
-    Console.WriteLine("Friday");
+	Console.WriteLine("Friday");
 }
-if(day == 6)
+if (day == 6)
 {
-    Console.WriteLine("Saturday");
+	Console.WriteLine("Saturday");
 }
-if(day == 7)
+if (day == 7)
 {
-    Console.WriteLine("Sunday");
+	Console.WriteLine("Sunday");
 }
 

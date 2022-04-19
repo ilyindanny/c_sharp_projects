@@ -28,7 +28,7 @@ Console.WriteLine(result01);
 // the second way.
 
 
-string result02 = Console.ReadLine();
+string result02 = Console.ReadLine() ?? "0";
 
 Console.WriteLine(result02[1]);
 
@@ -37,7 +37,7 @@ Console.WriteLine(result02[1]);
 // the third way (if you find out the second digit from tne end).
 
 
-string result002 = Console.ReadLine();
+string result002 = Console.ReadLine() ?? "0";
 
 int resultLength = result002.Length;
 

@@ -22,7 +22,7 @@ Console.WriteLine(max);
 // More good method:
 
 
-int [] array = {9, 8, 7, 67, 5, 46, 3, 2, 1};
+int[] array = { 9, 8, 7, 67, 5, 46, 3, 2, 1 };
 
 int n = array.Length;
 int FindSomeMyDigit = 1;
@@ -30,9 +30,9 @@ int ArrayElementsCounter = 0;
 
 while (ArrayElementsCounter < n)
 {
-    if (array [ArrayElementsCounter] == FindSomeMyDigit)
-    {
-        Console.WriteLine(ArrayElementsCounter);
-    }
-    ArrayElementsCounter++;
+	if (array[ArrayElementsCounter] == FindSomeMyDigit)
+	{
+		Console.WriteLine(ArrayElementsCounter);
+	}
+	ArrayElementsCounter++;
 }

@@ -15,9 +15,9 @@
 
 
 Console.WriteLine("input first digit:");
-string input_first = Console.ReadLine();
+string input_first = Console.ReadLine() ?? "0";
 Console.WriteLine("input second digit:");
-string input_second = Console.ReadLine();
+string input_second = Console.ReadLine() ?? "0";
 
 
 int digit_first = Int32.Parse(input_first);
@@ -26,9 +26,9 @@ int digit_second = Int32.Parse(input_second);
 
 if (digit_first == digit_second * digit_second)
 {
-    Console.WriteLine("да");
+	Console.WriteLine("да");
 }
 else
 {
-    Console.WriteLine("нет");
+	Console.WriteLine("нет");
 }
