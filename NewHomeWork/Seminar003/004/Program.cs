@@ -12,7 +12,7 @@ using System;
 using static System.Console;
 
 
-double N = Convert.ToDouble(ReadLine());
+double N = Convert.ToDouble(ReadLine() ?? "0");
 
 double index = 1;
 double result = 1;

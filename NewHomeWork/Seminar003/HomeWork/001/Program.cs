@@ -17,7 +17,7 @@
 // first way
 
 Console.WriteLine("input 5 digit number");
-string aNum = Console.ReadLine();
+string aNum = Console.ReadLine() ?? "0";
 
 if (aNum[0] == aNum[4])
 {

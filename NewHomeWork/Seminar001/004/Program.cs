@@ -3,11 +3,11 @@
 
 using System;
 
-int N = Int32.Parse(Console.ReadLine());
+int N = Int32.Parse(Console.ReadLine() ?? "0");
 int B = -N;
 
 while (B <= N)
 {
-    Console.Write($"{B} ");
-    B+=1;
+	Console.Write($"{B} ");
+	B += 1;
 }

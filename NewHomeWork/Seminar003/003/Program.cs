@@ -12,13 +12,13 @@ using static System.Console;
 
 
 
-double x1 = Convert.ToDouble(ReadLine());
+double x1 = Convert.ToDouble(ReadLine() ?? "0");
 
-double y1 = Convert.ToDouble(ReadLine());
+double y1 = Convert.ToDouble(ReadLine() ?? "0");
 
-double x2 = Convert.ToDouble(ReadLine());
+double x2 = Convert.ToDouble(ReadLine() ?? "0");
 
-double y2 = Convert.ToDouble(ReadLine());
+double y2 = Convert.ToDouble(ReadLine() ?? "0");
 
 
 

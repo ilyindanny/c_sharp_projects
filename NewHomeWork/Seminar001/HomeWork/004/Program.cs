@@ -8,7 +8,7 @@ using System;
 using static System.Console;
 
 WriteLine("input some number:");
-int N = Convert.ToInt32(ReadLine());
+int N = Convert.ToInt32(ReadLine() ?? "0");
 
 int D = 2;
 

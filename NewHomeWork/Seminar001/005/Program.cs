@@ -10,10 +10,10 @@
 
 using System;
 
-int N = Int32.Parse(Console.ReadLine());
+int N = Int32.Parse(Console.ReadLine() ?? "0");
 
 int x = N / 10;
-int y = N %10;
+int y = N % 10;
 
 Console.WriteLine($"x {x}");
 Console.WriteLine($"y {y}");

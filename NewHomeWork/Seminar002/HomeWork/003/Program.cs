@@ -17,7 +17,7 @@ using static System.Console;
 // the first way.
 
 
-int result05 = Convert.ToInt32(Console.ReadLine());
+int result05 = Convert.ToInt32(Console.ReadLine() ?? "0");
 
 if (result05 == 6 | result05 == 7)
 {
@@ -33,7 +33,7 @@ else
 // the second way.
 
 
-int result06 = Convert.ToInt32(Console.ReadLine());
+int result06 = Convert.ToInt32(Console.ReadLine() ?? "0");
 
 string answer01;
 
@@ -53,7 +53,7 @@ Console.WriteLine(answer01);
 // the third way.
 
 
-int result07 = Convert.ToInt32(Console.ReadLine());
+int result07 = Convert.ToInt32(Console.ReadLine() ?? "0");
 
 string answer02 = (result07 == 6) ? "yes" : (result07 == 7) ? "yes" : "not";
 

@@ -5,7 +5,7 @@ using System;
 using static System.Console;
 
 Console.WriteLine("input digit:");
-string input = Console.ReadLine();
+string input = Console.ReadLine() ?? "0";
 int digit = Int32.Parse(input);
 
 int result = digit * digit;

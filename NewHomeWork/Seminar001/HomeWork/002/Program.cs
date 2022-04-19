@@ -9,11 +9,11 @@ using System;
 using static System.Console;
 
 WriteLine("input first digit:");
-int A = Convert.ToInt32(ReadLine());
+int A = Convert.ToInt32(ReadLine() ?? "0");
 WriteLine("input second digit:");
-int B = Convert.ToInt32(ReadLine());
+int B = Convert.ToInt32(ReadLine() ?? "0");
 WriteLine("input third digit:");
-int C = Convert.ToInt32(ReadLine());
+int C = Convert.ToInt32(ReadLine() ?? "0");
 
 int max = A;
 
@@ -30,7 +30,7 @@ WriteLine($"{max} is the biggest");
 
 
 WriteLine("input three digit:");
-int Didg = Convert.ToInt32(ReadLine());
+int Didg = Convert.ToInt32(ReadLine() ?? "0");
 
 int A = Didg % 10;
 int B = Didg / 10 % 10;

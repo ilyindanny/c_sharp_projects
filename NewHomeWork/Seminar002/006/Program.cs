@@ -9,10 +9,10 @@ using static System.Console;
 
 
 WriteLine("введите первое число");
-int num1 = Convert.ToInt32(ReadLine());
+int num1 = Convert.ToInt32(ReadLine() ?? "0");
 
 WriteLine("введите второе число");
-int num2 = Convert.ToInt32(ReadLine());
+int num2 = Convert.ToInt32(ReadLine() ?? "0");
 
 
 

@@ -13,7 +13,7 @@ using static System.Console;
 
 // the first way.
 
-int result01 = Convert.ToInt32(Console.ReadLine());
+int result01 = Convert.ToInt32(Console.ReadLine() ?? "0");
 
 result01 = result01 / 10 % 10;
 
@@ -35,10 +35,11 @@ int resultLength = result002.Length;
 
 Console.WriteLine(result002[resultLength - 2]);
 
-
+/*
 // the 4th way (if you wanna convert a string to an integer).
 
 int result03 = Convert.ToInt32(Console.ReadLine()[1].ToString());
 
 
 Console.WriteLine(result03);
+*/

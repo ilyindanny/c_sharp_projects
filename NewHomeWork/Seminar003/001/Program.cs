@@ -9,7 +9,7 @@ using static System.Console;
 
 
 Console.WriteLine("input number of quoter");
-int num = Convert.ToInt32(ReadLine());
+int num = Convert.ToInt32(ReadLine() ?? "0");
 
 switch (num)
 {

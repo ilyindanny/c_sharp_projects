@@ -11,7 +11,7 @@
 
 Console.WriteLine("input number");
 
-double N = Convert.ToDouble(Console.ReadLine());
+double N = Convert.ToDouble(Console.ReadLine() ?? "0");
 double index = 1;
 
 while (index <= N)

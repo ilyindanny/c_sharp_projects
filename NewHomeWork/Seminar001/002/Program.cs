@@ -9,7 +9,7 @@
 */
 
 
-// int GGG = int.Parse(Console.ReadLine());
+// int GGG = int.Parse(Console.ReadLine() ?? "0");
 
 
 

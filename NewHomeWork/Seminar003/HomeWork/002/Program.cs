@@ -12,27 +12,27 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 
 Console.WriteLine("imput coordinate x1");
 
-double x1 = Convert.ToDouble(Console.ReadLine());
+double x1 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 Console.WriteLine("imput coordinate y1");
 
-double y1 = Convert.ToDouble(Console.ReadLine());
+double y1 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 Console.WriteLine("imput coordinate z1");
 
-double z1 = Convert.ToDouble(Console.ReadLine());
+double z1 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 Console.WriteLine("imput coordinate x1");
 
-double x2 = Convert.ToDouble(Console.ReadLine());
+double x2 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 Console.WriteLine("imput coordinate y1");
 
-double y2 = Convert.ToDouble(Console.ReadLine());
+double y2 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 Console.WriteLine("imput coordinate z1");
 
-double z2 = Convert.ToDouble(Console.ReadLine());
+double z2 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 
 

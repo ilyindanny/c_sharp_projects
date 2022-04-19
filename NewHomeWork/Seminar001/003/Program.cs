@@ -8,7 +8,7 @@ Console.WriteLine("input number of day of week:");
 //string input = Console.ReadLine() ?? "0";
 //int day = Int32.Parse(input);
 
-int day = Int32.Parse(Console.ReadLine());
+int day = Int32.Parse(Console.ReadLine() ?? "0");
 
 if (day == 1)
 {

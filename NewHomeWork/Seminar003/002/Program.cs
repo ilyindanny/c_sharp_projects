@@ -8,10 +8,10 @@ using System;
 using static System.Console;
 
 Console.Write("iput x");
-int x = Convert.ToInt32(ReadLine());
+int x = Convert.ToInt32(ReadLine() ?? "0");
 
 Console.Write("imput y");
-int y = Convert.ToInt32(ReadLine());
+int y = Convert.ToInt32(ReadLine() ?? "0");
 
 
 

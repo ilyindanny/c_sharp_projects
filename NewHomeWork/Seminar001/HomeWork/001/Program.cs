@@ -10,15 +10,15 @@ using System;
 using static System.Console;
 
 WriteLine("input fiirst digit:");
-int FirstD = Convert.ToInt32(ReadLine());
+int FirstD = Convert.ToInt32(ReadLine() ?? "0");
 WriteLine("input second digit:");
-int SecondD = Convert.ToInt32(ReadLine());
+int SecondD = Convert.ToInt32(ReadLine() ?? "0");
 
 if (FirstD > SecondD)
 {
-    WriteLine($"{FirstD} > {SecondD}");
+	WriteLine($"{FirstD} > {SecondD}");
 }
 else
 {
-    WriteLine($"{FirstD} < {SecondD}");
+	WriteLine($"{FirstD} < {SecondD}");
 }

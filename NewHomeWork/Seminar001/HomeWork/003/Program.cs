@@ -9,13 +9,13 @@ using System;
 using static System.Console;
 
 WriteLine("input some number:");
-int N = Convert.ToInt32(ReadLine());
+int N = Convert.ToInt32(ReadLine() ?? "0");
 
 if (N % 2 == 0)
 {
-    WriteLine("it's clear number");
+	WriteLine("it's clear number");
 }
 else
 {
-    WriteLine("This is not clear number");
+	WriteLine("This is not clear number");
 }

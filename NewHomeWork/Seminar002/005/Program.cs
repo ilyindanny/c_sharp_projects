@@ -10,7 +10,7 @@ using static System.Console;
 
 
 WriteLine("введите любое число");
-int num = Convert.ToInt32(ReadLine());
+int num = Convert.ToInt32(ReadLine() ?? "0");
 
 //int a = 1;
 //int b = 2;

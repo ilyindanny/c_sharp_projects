@@ -7,7 +7,7 @@ using static System.Console;
 
 
 WriteLine("введите любое число");
-string nString = (ReadLine());
+string nString = (ReadLine() ?? "0");
 int leength = nString.Length;
 
 int first = Convert.ToInt32(nString[0].ToString());
