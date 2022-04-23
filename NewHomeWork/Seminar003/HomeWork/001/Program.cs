@@ -14,6 +14,11 @@
 */
 
 
+using System;
+
+using static System.Console;
+
+
 // first way
 
 Console.WriteLine("input 5 digit number");
@@ -32,6 +37,38 @@ else
 
 // second way
 
-string result = (aNum[0] == aNum[4] && aNum[1] == aNum[3]) ? "yes" : "not";
+string result01 = (aNum[0] == aNum[4] && aNum[1] == aNum[3]) ? "yes" : "not";
 
-Console.WriteLine(result);
+Console.WriteLine(result01);
+
+
+// 3th
+
+WriteLine((Polidrom(NewArray(ReadLine() ?? "0"))));
+
+string Polidrom(int[] array)
+{
+	string result02 = "поли... что-то там";
+	for (int index = 0; index < array.Length; index++)
+	{
+		if (array[index] != array[array.Length - 1 - index])
+		{
+			result02 = "не пойми что там";
+			break;
+		}
+	}
+	return result02;
+}
+
+
+// метод для создания массива на основе строки из консоли
+
+int[] NewArray(string line)
+{
+	int[] array = new int[line.Length];
+	for (int i = 0; i < array.Length; i++)
+	{
+		array[i] = Convert.ToInt32(line[i].ToString());
+	}
+	return array;
+}
