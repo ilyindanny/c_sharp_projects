@@ -49,7 +49,7 @@ WriteLine((Polidrom(NewArray(ReadLine() ?? "0"))));
 string Polidrom(int[] array)
 {
 	string result02 = "поли... что-то там";
-	for (int index = 0; index < array.Length; index++)
+	for (int index = 0; index < array.Length / 2; index++)
 	{
 		if (array[index] != array[array.Length - 1 - index])
 		{
