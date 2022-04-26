@@ -10,21 +10,30 @@
 using System;
 using static System.Console;
 
-
-
-
-int[] array = { 1, 3, 4 };
-
-Multi(array);
-
-void Multi(int[] array)
+public class Program
 {
-	int mult = 1;
-
-	for (int index = 0; index < array.Length / 2; index++)
+    static public void Main ()
 	{
-		mult = array[index] * array[array.Length - index - 1];
-		WriteLine(mult);
+
+
+
+int[] array = { 1, 3, 3, 9, 4, 6};
+
+WriteLine(String.Join(" ",MultiArray(array)));
+
+int[] MultiArray(int[] array)
+{
+	int[] arr = new int[array.Length / 2];
+
+	for (int i = 0; i < array.Length / 2; i++)
+	{
+		arr[i] = array[i] * array[array.Length - i - 1];
+		
 	}
 	if (array.Length % 2 == 1) WriteLine(array[array.Length / 2]);
+	return arr;
+}
+
+
+	}
 }
