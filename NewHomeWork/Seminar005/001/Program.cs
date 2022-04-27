@@ -44,7 +44,6 @@ int[] GetArray(int size, int minValue, int maxValue)
 // text
 //4444444444444 ttttttt
 =======
-// texttexttexttexttext
+// texttexttextte
 //44
 >>>>>>> master
-
