@@ -16,6 +16,10 @@
 using System;
 using static System.Console;
 using System.Linq;
+public class Program
+{
+	static public void Main ()
+	{
 
 
 var array = new int[12].Select(x => new Random().Next(0, 1000)).ToArray();
@@ -28,3 +32,6 @@ foreach (var el in array)
 }
 WriteLine(count);
 WriteLine(String.Join(" ", array));
+
+	}
+}
