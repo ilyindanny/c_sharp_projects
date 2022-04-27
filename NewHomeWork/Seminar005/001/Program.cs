@@ -1,4 +1,4 @@
-﻿// 
+// 
 /*
 **Задача 31:** Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. Найдите сумму отрицательных и положительных элементов массива.
 
@@ -38,7 +38,7 @@ int[] GetArray(int size, int minValue, int maxValue)
 
 
 // Console.Clear();
-// int[] k=new int[20].Select(x=>new Random().Next(0,1000)).Where(x=>x>=9&&x<=100).ToArray()"тестовый текст для проверки работы гита";
+// int[] k=new int[20].Select(x=>new Random().Next(0,1000)).Where(x=>x>=9&&x<=100).ToArray();
 // Console.WriteLine(String.Join(" ",k));
+// text
 
-// тестовый текст для проверки работы гита
