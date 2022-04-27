@@ -22,12 +22,24 @@ string[] arr = Arr(array);
 arr = arr.Select(x => x + "1").ToArray();
 
 
-
 Write(String.Join(" ", array) + "\n");
-
 Write(String.Join(" ", arr) + "\n");
 
 
+// а здесь используется метод Where, который я не знаю, что он делает:
+
+int[] array02 = new int [8].Select(x => new Random().Next(0, 1000)).Where(x => x >= 9 && x <= 100).ToArray();
+
+
+// используя метод Select и Where, можно задать значения элементов массива, например, чтобы все элементы были нечетными:
+
+int[] array03 = new int [20].Select(x => new Random().Next(0, 10)).Where(x => x % 2 != 0).ToArray();
+
+Write(String.Join(" ", array03));
+
+
+
+// тут метод для конвертации массива int в string
 
 string[] Arr(int[] array)
 {
