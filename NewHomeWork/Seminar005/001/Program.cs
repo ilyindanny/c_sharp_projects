@@ -38,5 +38,7 @@ int[] GetArray(int size, int minValue, int maxValue)
 
 
 // Console.Clear();
-// int[] k=new int[20].Select(x=>new Random().Next(0,1000)).Where(x=>x>=9&&x<=100).ToArray();
+// int[] k=new int[20].Select(x=>new Random().Next(0,1000)).Where(x=>x>=9&&x<=100).ToArray()"тестовый текст для проверки работы гита";
 // Console.WriteLine(String.Join(" ",k));
+
+// тестовый текст для проверки работы гита
