@@ -15,22 +15,26 @@ Console.Clear();
 
 int length = 9;
 
-int[] ar = new int[length].Select(x => x = new Random().Next(0, 20)).ToArray();
+int[] array01 = new int[length].Select(x => x = new Random().Next(0, 20)).ToArray();
 
-Console.WriteLine(String.Join(" ", ar));
+Console.WriteLine(String.Join(" ", array01));
+
+// замена элементов массива при помощи вспомогательной переменной
 
 for (int i = 0; i < length / 2; i++)
 {
-	int k = ar[i];
-	ar[i] = ar[length - i - 1];
-	ar[length - i - 1] = k;
+	int temp = array01[i];
+	array01[i] = array01[length - i - 1];
+	array01[length - i - 1] = temp;
 }
 
-Console.WriteLine(String.Join(" ", ar));
+Console.WriteLine(String.Join(" ", array01));
 
-int[] ar1 = new int[length];
+// создание второго массива и заполнение в обратном порядке
+
+int[] array02 = new int[length];
 for (int i = 0; i < length; i++)
 {
-	ar1[length - i - 1] = ar[i];
+	array02[length - i - 1] = array01[i];
 }
-Console.WriteLine(String.Join(" ", ar1));
+Console.WriteLine(String.Join(" ", array02));
