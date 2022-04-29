@@ -1,15 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-int a1 = int.Parse(Console.ReadLine());
-int a2 = int.Parse(Console.ReadLine());
-int n = int.Parse(Console.ReadLine());
-От Roman Bachinsky всем 09:59 PM
-с подсказками
-тяжеловато
-От Олег Канакаев всем 09:59 PM
-int F1 = int.Parse(Console.ReadLine());
-int F2 = int.Parse(Console.ReadLine());
-int N = int.Parse(Console.ReadLine());
+﻿//
+
+// как я понимаю, это решение задачи от Тимура
+
+int F1 = int.Parse(Console.ReadLine()!);
+int F2 = int.Parse(Console.ReadLine()!);
+int N = int.Parse(Console.ReadLine()!);
 
 GetFibonacci(F1, F2, N);
 
