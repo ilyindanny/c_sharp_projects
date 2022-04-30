@@ -38,17 +38,17 @@ public class Program
 
 				if (Ny == My)
 				{
-					result = $"X {x1:N1}, Y {Ny:N1}";
+					result = $"X {x1}, Y {Ny}";
 					break;
 				}
 				x1 += 0.1;
 
-				Ny = Math.Round(k1 * x2 + b1, 1);
-				My = Math.Round(k2 * x2 + b2, 1);
+				Ny = (k1 * x2 + b1);
+				My = (k2 * x2 + b2);
 
 				if (Ny == My)
 				{
-					result = $"X {x2:N1}, Y {Ny:N1}";
+					result = $"X {x2}, Y {Ny}";
 					break;
 				}
 				x2 -= 0.1;
