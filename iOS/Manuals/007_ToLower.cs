@@ -2,44 +2,43 @@ using System;
 
 public class Program
 {
-    static public void Main ()
-    {
+	static public void Main()
+	{
 
 
-// понижает регистр:
+		// понижает регистр:
 
 
-string S = "ABCdef".ToLower();
+		string S = "ABCdef".ToLower();
 
-Console.WriteLine(S);
-
-
-// понижает регистр:
-
-S = "aBcDeF";
-
-S = S.ToLower();
-
-Console.WriteLine(S);
+		Console.WriteLine(S);
 
 
-// только проверяет соответствие по пониженному регистру (в консоль возвращает с высоким регистром):
+		// понижает регистр:
 
-S = "abcDEF";
+		S = "aBcDeF";
 
-if (S.ToLower() == "abcdef")
-{
-	Console.WriteLine(S);
-}
+		S = S.ToLower();
 
-
-// понижает регистр при выводе в консоль:
-
-if (S.ToLower() == "abcdef")
-{
-	Console.WriteLine(S.ToLower());
-}
+		Console.WriteLine(S);
 
 
-    }
+		// только проверяет соответствие по пониженному регистру (в консоль возвращает с высоким регистром):
+
+		S = "abcDEF";
+
+		if (S.ToLower() == "abcdef")
+		{
+			Console.WriteLine(S);
+		}
+
+
+		// понижает регистр при выводе в консоль:
+
+		if (S.ToLower() == "abcdef")
+		{
+			Console.WriteLine(S.ToLower());
+		}
+
+	}
 }
