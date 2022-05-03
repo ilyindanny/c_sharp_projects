@@ -1,17 +1,9 @@
 using System;
 
-using static System.Console;
-
 public class Program
 {
-	static public void Main()
-	{
-
-
-
-
-
-
-
-	}
+    static public void Main ()
+    {
+        
+    }
 }

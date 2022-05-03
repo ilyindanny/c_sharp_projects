@@ -1,5 +1,5 @@
 using System;
-
+using static System.Console;
 public class Program
 {
 	static public void Main()
@@ -40,6 +40,8 @@ public class Program
 		string b = Console.ReadLine();
 		int bb = Int32.Parse(b);
 		Console.WriteLine($"{aa} and {bb}");
+		
+
 
 	}
 }
