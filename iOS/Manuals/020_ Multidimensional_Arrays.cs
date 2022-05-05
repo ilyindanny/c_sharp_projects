@@ -40,7 +40,7 @@ int columns = matrix.GetLength(1);
 
 // распечатать при помощи метода (будет вложенный цикл):
 
-Methods.PrintMatrix(matrix);
+myProgram.PrintMatrix(matrix);
 
 
 // трехмерные массивы:
@@ -73,7 +73,7 @@ WriteLine(astrArray[1][1] + " = d");
 
 
 
-public class Methods
+public class myProgram
 {
 	
 static public void PrintArray(string[,] matrix)
