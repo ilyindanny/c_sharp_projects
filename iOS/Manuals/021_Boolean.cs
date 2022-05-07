@@ -25,7 +25,7 @@ public class Program
 		string s = "aBcD";
 		int i = String.Compare(s, "abcd", true);
 		WriteLine(i);
-		// если после этого выражения добавить сравнение, то результат сравнения модноможно присвоить типу bool:
+		// если после этого выражения добавить сравнение, то результат сравнения можно присвоить типу bool:
 		bool b = String.Compare(s, "abcd", true) == 0;
 		WriteLine(b);
 		
