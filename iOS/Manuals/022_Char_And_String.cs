@@ -99,9 +99,11 @@ public class Program
 		str = str.Substring(1, 2); // параметры могут быть заданы переменным. первый — индекс, второй — количество символов
 		WriteLine(str);
 
+		// метод StringFormat позволяет применить форматирование и вернуть строку:
 
-
-
+		int A = 1, B = 2, C = A + B;
+		str = String.Format("{0} + {2} = {1}", A, C, B);
+		WriteLine(str);
 
 	}
 }
