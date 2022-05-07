@@ -67,6 +67,21 @@ new string [] {"e", "f"}
 
 WriteLine(astrArray[1][1] + " = d");
 
+
+// массив можно не объявлять, а выводить на жкран сразу в методе Write:
+
+int i = new Random().Next(1, 5);
+
+WriteLine(new string[] {"a", "b", "c", "d"} [i - 1]);
+
+
+// пример четырехмерного массива:
+
+int[,,,] ai4D = new int[5,5,5,5];
+
+ai4D[2,2,2,2] = 555;
+WriteLine(ai4D[2,2,2,2] + " " + ai4D.Length + " " + ai4D.GetLength(3) + " " + ai4D.Rank);
+
     }
 }
 
