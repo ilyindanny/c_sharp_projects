@@ -11,9 +11,10 @@ static public void Main ()
 
 
 
-int[] ai = {1, 2, 3, 4, 5, 6};
-string str = new string(ai);
+// Convert.ToBolean() возвращает false, есои значение ноль, и true, если не ноль (не уверен. еще не видел)
 
+bool b = Convert.ToBoolean(false);
+Write(b);
 
 	}
 }
