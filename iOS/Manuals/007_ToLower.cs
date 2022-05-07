@@ -1,5 +1,7 @@
 using System;
 
+using static System.Console;
+
 public class Program
 {
 	static public void Main()
@@ -8,37 +10,33 @@ public class Program
 
 		// понижает регистр:
 
-
 		string S = "ABCdef".ToLower();
-
-		Console.WriteLine(S);
+		WriteLine(S);
 
 
 		// понижает регистр:
 
 		S = "aBcDeF";
-
 		S = S.ToLower();
+		WriteLine(S);
 
-		Console.WriteLine(S);
 
-
-		// только проверяет соответствие по пониженному регистру (в консоль возвращает с высоким регистром):
+		// только проверяет соответствие по пониженному регистру (сама переменная остается неизменной):
 
 		S = "abcDEF";
-
 		if (S.ToLower() == "abcdef")
 		{
-			Console.WriteLine(S);
+			WriteLine(S);
 		}
 
 
-		// понижает регистр при выводе в консоль:
-
-		if (S.ToLower() == "abcdef")
-		{
-			Console.WriteLine(S.ToLower());
-		}
+		// понижает регистр при выводе на монитор:
+		WriteLine(S.ToLower());
+		
+		// метод экземпляра класса String под названием Trim удаляет пробелы до и после:
+		
+		S = ReadLine().ToLower().Trim();
+		WriteLine(S);
 
 	}
 }

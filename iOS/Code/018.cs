@@ -11,9 +11,11 @@ static public void Main ()
 
 
 
-// Convert.ToBolean() возвращает false, есои значение ноль, и true, если не ноль (не уверен. еще не видел)
+// Convert.ToBolean() возвращает fulse, есои значение ноль, и true, если не ноль (не уверен. еще не видел)
 
-bool b = Convert.ToBoolean(false);
+string s = "aBcD";
+
+bool b = s.ToLower() == "abcd";
 Write(b);
 
 	}
