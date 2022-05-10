@@ -30,8 +30,20 @@ public class Program
 		WriteLine("size from wardrobe to ceiling = {0:N2}", dCathetB);
 
 
+		// вычисление угла открывания люка при условии, что петли со стороны шкафа
 
+		dDepthSize = 630;
+		dCathetB = 300;
+		dCathetA = dDepthSize - 400;
 
+		double dHypotenuse = Math.Sqrt(dCathetB * dCathetB + dCathetA * dCathetA); // вычисление гипотенузы треугольника
+
+		// а дальше надо вычислить угол. как-то через косинусы
+
+		WriteLine("A, B, C: {0:N2} {1:N2} {2:N2}", dCathetA, dCathetB, dHypotenuse);
+
+		// WriteLine(Math.Cos(30 / (180 / Math.PI)));
+		WriteLine((Math.Tan(0.3420) * (180 / Math.PI)));
 
 
 	}
