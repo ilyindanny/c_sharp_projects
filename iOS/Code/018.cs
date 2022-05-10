@@ -38,6 +38,7 @@ dCathetA = dDepthSize - 400;
 
 double dHypotenuse = Math.Sqrt(dCathetB * dCathetB + dCathetA * dCathetA); // вычисление гипотенузы треугольника
 
+а дальше надо вычислить угол. как-то через косинусы
 
 
 
