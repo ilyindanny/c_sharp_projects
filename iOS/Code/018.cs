@@ -30,6 +30,15 @@ dCathetB = Math.Sqrt(dR * dR - dCathetA * dCathetA);
 WriteLine("size from wardrobe to ceiling = {0:N2}", dCathetB);
 
 
+// вычисление угла открывания люка при условии, что петли со стороны шкафа
+
+dDepthSize = 630;
+dCathetB = 300;
+dCathetA = dDepthSize - 400;
+
+double dHypotenuse = Math.Sqrt(dCathetB * dCathetB + dCathetA * dCathetA); // вычисление гипотенузы треугольника
+
+
 
 
 	}
