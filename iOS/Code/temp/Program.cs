@@ -42,6 +42,8 @@ public class Program
 
 		WriteLine("A, B, C: {0:N2} {1:N2} {2:N2}", dCathetA, dCathetB, dHypotenuse);
 
+		// WriteLine(Math.Cos(30 / (180 / Math.PI)));
+		WriteLine((Math.Tan(0.3420) * (180 / Math.PI)));
 
 
 	}
