@@ -21,6 +21,8 @@ public class Program
 
 		// Convert.ToBolean() возвращает False, если значение ноль (цифры) или "false", и True, если не ноль (цифры) или "true". любые другие символы, если это не цифры, дают ошибку
 		
+		// Convert.ToInt32(bool) возвращает 1 или 0, если Boolean равен True или False соответственно
+		
 		// String.Compare() не чувствителен к регистру, сравнивает и, если строка больше, то выдает 1, если меньше, то -1, а если строки одинаковые, то 0:
 		string s = "aBcD";
 		int i = String.Compare(s, "abcd", true);

@@ -8,15 +8,29 @@ public class Program
 static public void Main ()
 	{
 
+// вычисление глубины шкафа при условии заданной высоты шкафа
+// вычисление расстояния по горизонтали от точки на стене до точки на дуге открывания люка (задается расстояние от потолка, то есть длинна катета по вертикали):
+
+double dR = 1000; // радиус дуги
+double dCathetB = 638; // катет (по вертикали)
+double dCathetA = Math.Sqrt(dR * dR - dCathetB * dCathetB); // возвращает длинну катета по горизонтали
+
+double dDepthSize = 400 + dR - dCathetA; // вычисление расстояния от точки на стене до точки на дуге (по горизонтали) 400 - это расстояние от стены до люка
+
+WriteLine("depth size of wardrobe = {0:N2}", dDepthSize);
 
 
 
-// Convert.ToBolean() возвращает fulse, есои значение ноль, и true, если не ноль (не уверен. еще не видел)
+// вычисление необходимой высоты шкафа, при условии заданной глубины шкафа.
 
-string s = "aBcD";
+dDepthSize = 630;
+dCathetA = dR + 400 - dDepthSize;
+dCathetB = Math.Sqrt(dR * dR - dCathetA * dCathetA);
 
-bool b = s.ToLower() == "abcd";
-Write(b);
+WriteLine("size from wardrobe to ceiling = {0:N2}", dCathetB);
+
+
+
 
 	}
 }
