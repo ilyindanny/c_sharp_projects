@@ -23,7 +23,7 @@ public class Program
 
 		// вычисление необходимой высоты шкафа, при условии заданной глубины шкафа.
 
-		dDepthSize = 630;
+		dDepthSize = 650;
 		dCathetA = dR + 400 - dDepthSize;
 		dCathetB = Math.Sqrt(dR * dR - dCathetA * dCathetA);
 
@@ -32,19 +32,14 @@ public class Program
 
 		// вычисление угла открывания люка при условии, что петли со стороны шкафа
 
-		dDepthSize = 630;
-		dCathetB = 300;
+		dDepthSize = 650;
+		dCathetB = 250;
 		dCathetA = dDepthSize - 400;
 
 		double dHypotenuse = Math.Sqrt(dCathetB * dCathetB + dCathetA * dCathetA); // вычисление гипотенузы треугольника
 
-		// а дальше надо вычислить угол. как-то через косинусы
 
-		WriteLine("A, B, C: {0:N2} {1:N2} {2:N2}", dCathetA, dCathetB, dHypotenuse);
-
-		// WriteLine(Math.Cos(30 / (180 / Math.PI)));
-		WriteLine((Math.Tan(0.3420) * (180 / Math.PI)));
-
+		WriteLine((Math.Asin(dCathetB / dHypotenuse) * (180 / Math.PI)));
 
 	}
 }
