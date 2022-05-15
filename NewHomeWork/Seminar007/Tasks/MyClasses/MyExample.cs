@@ -20,6 +20,17 @@ commands:
 потом команда добавления ссылки на проект с методами: dotnet sln Tasks.sln add .\Classes\Classes.csproj
 
 при вызове методов из MyClasses необходимо подключить пространство имен директивой using MyClasses. Метод вызывается с указанием класса: MyExample.GetArray
+
+
+__________________________________________________________________________________________________________________________________________________
+добавление комментария к методу:
+/// <Summary>
+/// Создание массива от мин до макс
+///</Summary>
+
+если метод продублировать, изменить код и сохранить с новым комментарием (имя метода остается то же) то у метода появится перегрузка
+__________________________________________________________________________________________________________________________________________________
+
 */
 
 
@@ -28,7 +39,9 @@ using System;
 using static System.Console;
 public class MyExample
 {
-
+	/// <Summary>
+	/// Создание массива от мин до макс
+	///</Summary>
 	public static int[,] GetArray(int rows, int columns, int min, int max)
 	{
 		int[,] array = new int[rows, columns];
@@ -42,6 +55,25 @@ public class MyExample
 		return array;
 	}
 
+	/// <Summary>
+	/// Создание массива до макс
+	///</Summary>
+	public static int[,] GetArray(int rows, int columns, int max)
+	{
+		int[,] array = new int[rows, columns];
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < columns; j++)
+			{
+				array[i, j] = new Random().Next(0, max);
+			}
+		}
+		return array;
+	}
+
+	/// <Summary>
+	/// Печать массива
+	///</Summary>
 	public static void PrintArray(int[,] array)
 	{
 		for (int i = 0; i < array.GetLength(0); i++)
