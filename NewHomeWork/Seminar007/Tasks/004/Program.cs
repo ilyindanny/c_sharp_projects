@@ -5,6 +5,10 @@
 
 ********************************************/
 
+
+// для не квадратных массивов нужна была бы проверка, и по меньшей стороне выставлялся бы счетчик:
+// int length = array.GetLength(0) > array.GetLength(1) ? array.GetLength(1) : array.GetLength(0);
+
 using System;
 using MyClasses;
 using static System.Console;
