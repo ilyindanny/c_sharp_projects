@@ -16,23 +16,23 @@ class Program
 		int n = int.Parse(ReadLine()!);
 
 		// группа методов для создания массива, подсчета суммы по диагонали, вывода на экран и потом замена остальных элементов нулями и снова выводом на экран
-		WriteLine("first method \n");
+		WriteLine("first method");
 
 		int[,] array = MyMethods.GetArray(n);
 		int sumOfDiagonal = MyMethods.SumOfDiagonal(array);
 		MyMethods.PrintArray(array);
-		WriteLine();
+
 		WriteLine(sumOfDiagonal);
 		array = MyMethods.ChangeByNull(array);
 		MyMethods.PrintArray(array);
 
-
-		WriteLine("second method \n");
+		WriteLine();
+		WriteLine("second method");
 
 		array = MyMethods.GetArray(n);
 		int sumOfDiagonalBisector = MyMethods.SumOfDiagonalBisector(array);
 		MyMethods.PrintArray(array);
-		WriteLine();
+
 		WriteLine(sumOfDiagonalBisector);
 		array = MyMethods.ChangeByNullBisector(array);
 		MyMethods.PrintArray(array);
