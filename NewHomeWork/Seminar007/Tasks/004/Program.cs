@@ -20,13 +20,13 @@ class Program
 
 		WriteLine("first method");
 
-		int[,] array = MyMethods.GetArray(n);
-		int sumOfDiagonal = MyMethods.SumOfDiagonal(array);
-		MyMethods.PrintArray(array);
+		int[,] numArray = MyMethods.GetArray(n);
+		int sumOfDiagonal = MyMethods.SumOfDiagonal(numArray);
+		MyMethods.PrintArray(numArray);
 
 		WriteLine(sumOfDiagonal);
-		array = MyMethods.ChangeByNull(array);
-		MyMethods.PrintArray(array);
+		numArray = MyMethods.ChangeByNull(numArray);
+		MyMethods.PrintArray(numArray);
 
 		// вторая группа методов для создания массива, подсчета суммы элементов по диагонали-биссектрисе (ИДУЩЕЙ ОТ НУЛЯ),
 		// вывода на экран и последующей заменой остальных элементов нулями и снова выводом на экран
@@ -34,13 +34,13 @@ class Program
 		WriteLine();
 		WriteLine("second method");
 
-		array = MyMethods.GetArray(n);
-		int sumOfDiagonalBisector = MyMethods.SumOfDiagonalBisector(array);
-		MyMethods.PrintArray(array);
+		numArray = MyMethods.GetArray(n);
+		int sumOfDiagonalBisector = MyMethods.SumOfDiagonalBisector(numArray);
+		MyMethods.PrintArray(numArray);
 
 		WriteLine(sumOfDiagonalBisector);
-		array = MyMethods.ChangeByNullBisector(array);
-		MyMethods.PrintArray(array);
+		numArray = MyMethods.ChangeByNullBisector(numArray);
+		MyMethods.PrintArray(numArray);
 
 
 
