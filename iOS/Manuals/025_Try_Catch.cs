@@ -14,8 +14,8 @@ Write(Num);
 /// </Summary>
 double FindNumInString(string line)
 {
-	double result = 0;
-	double dTemp = 0;
+	double result;
+	double dTemp;
 	string sTemp = String.Empty;
 
 	for (int i = 0; i < line.Length; i++)
