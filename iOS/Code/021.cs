@@ -5,34 +5,52 @@ public class Program
     static public void Main ()
     {
 
+int[,] array = GetArray(5, 5);
 
-
-double angle = 45;
-double cathetB = 6;
-double hypotenuse = 5;
-
-WriteLine(Math.Acos(cathetB / hypotenuse));
-
-// WriteLine(Math.Tan(30 * Math.PI / 180) * cathetB);
+FindAverage(array);
+WriteLine();
+PrintArray(array);
 
 
 
-// WriteLine(Math.Asin(cathetB / hypotenuse) * (180 / Math.PI));
+int[,] GetArray(int rows, int columns)
+{
+	int[,] array = new int[rows, columns];
+	for (int i = 0; i < array.GetLength(0); i++)
+	{
+		for (int j = 0; j < array.GetLength(1); j++)
+		{
+			array[i, j] = new Random().Next(10);
+		}
+	}
+	return array;
+}
 
+void FindAverage(int[,] array)
+{
+	double sum = 0;
+	for (int j = 0; j < array.GetLength(1); j++)
+	{
+		for (int i = 0; i < array.GetLength(0); i++)
+		{
+			sum += array[i, j];
+		}
+		Write("{0, 5}", sum / array.GetLength(0));
+		sum = 0;
+	}	
+}
 
-
-
-// WriteLine(hypotenuse * Math.Sin(angle / (180 / Math.PI)));
-
-// WriteLine(hypotenuse * Math.Sin(angle / (180 / Math.PI)));
-
-// 
-
-//double cathetH = (hypotenuse * (Math.Sin(Math.Acos(cathetB / hypotenuse))));
-
-//WriteLine(cathetH);
-//WriteLine(hypotenuse * (1 - (cathetB / hypotenuse)));
-
-
+void PrintArray(int[,] array)
+{
+	for (int i = 0; i < array.GetLength(0); i++)
+	{
+		for (int j = 0; j < array.GetLength(1); j++)
+		{
+			Write("{0, 5}", array[i, j]);
+		}
+		WriteLine();
+	}
+		
+}
     }
 }

@@ -13,7 +13,7 @@ public class Program
 			int index = 0;
 			while (index < length)
 			{
-				array[index] = new Random().Next(9, 101);
+				array[index] = new Random().Next(9, 100);
 				index += 1;
 			}
 
