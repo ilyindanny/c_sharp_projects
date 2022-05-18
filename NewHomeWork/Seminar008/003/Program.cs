@@ -10,7 +10,7 @@ class Program
 {
 	static void Main()
 	{
-		int[,] array = MyMethods.GetArray(5, 8, 0, 10);
+		int[,] array = MyMethods.GetArray(5, 5, 0, 10);
 		MyMethods.PrintArray(array);
 
 		// преобразование двумерного массива в одномерный:
