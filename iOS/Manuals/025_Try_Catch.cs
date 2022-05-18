@@ -25,8 +25,9 @@ double FindNumInString(string line)
 			dTemp = Double.Parse(line[i].ToString());
 			
 		}
-		catch
+		catch (Exception exc) // или FormatException, OverflowException, ArgumentNullException
 		{
+			WriteLine(exc); // или WriteLine(exc.Message)
 			continue;
 		}
 		sTemp += Convert.ToString(dTemp);
