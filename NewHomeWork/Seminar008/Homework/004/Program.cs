@@ -12,7 +12,7 @@ public class Program
 {
 	static public void Main()
 	{
-		int[,,] array = GetArray(3, 3, 3);
+		int[,,] array = GetArray(2, 2, 4);
 		PrintArray(array);
 
 
@@ -45,9 +45,9 @@ public class Program
 					{
 						Write("{0, 5}({1},{2},{3})", array[i, j, k], i, j, k);
 					}
-					WriteLine();
+					WriteLine("\n");
 				}
-				WriteLine();
+				
 			}
 		}
 	}
