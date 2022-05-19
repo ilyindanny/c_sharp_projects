@@ -1,52 +1,80 @@
 using System;
 using static System.Console;
-using System.Linq;
 public class Program
 {
     static public void Main ()
     {
+/*
+Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Например, заданы 2 массива:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+5 2 6 7
+и
+1 5 8 5
+4 9 4 2
+7 2 2 6
+2 3 4 7
+Их произведение будет равно следующему массиву:
+1 20 56 10
+20 81 8 6
+56 8 4 24
+10 6 24 49
+*/
 
 
-int[] array = {9, 9, 9, 4, 4, 4, 3, 3, 3, 1};
+int[,] array1 = GetArray(5, 5, 1, 10);
+int[,] array2 = GetArray(5, 5, 1, 10);
+
+PrintArray(array1);
+WriteLine();
+PrintArray(array2);
+WriteLine();
+
+PrintArray(ProductArrays(array1, array2));
 
 
-int temp = 1;
-string strCount = String.Empty;
-string strNum = String.Empty;
-int i;
-for(i = 0; i < array.Length - 1; i++)
+
+int[,] ProductArrays(int[,] array1, int[,] array2)
 {
-	if (array[i] == array[i + 1])
+	int[,] newArray = new int[array1.GetLength(0), array1.GetLength(1)];
+	for (int i = 0; i < array1.GetLength(0); i++)
 	{
-		temp++;
+		for (int j = 0; j < array1.GetLength(1); j++)
+		{
+			newArray[i, j] = array1[i, j] * array2[i, j];
+		}
 	}
-	else
-	{
-		strCount += temp + " ";
-		strNum += array[i] + " ";
-		temp = 1;	
-	}	
+	return newArray;
 }
-strCount += temp + " ";
-strNum += array[i] + " ";
-
-int[] array1 = strCount.Split(" ",StringSplitOptions.RemoveEmptyEntries).Select(x=>int.Parse(x)).ToArray();
-
-int[] array2 = strNum.Split(" ",StringSplitOptions.RemoveEmptyEntries).Select(x=>int.Parse(x)).ToArray();
 
 
-
-//int[] array1=array.Select(x=>x*-1).ToArray();
-
-PrintArray(array1, array2);
-
-
-void PrintArray(int[] array1, int[] array2)
-{
-	for(int i = 0; i < array1.Length; i++)
+int[,] GetArray(int rows, int columns, int min, int max)
 	{
-	WriteLine("{1, 3} is founded {0, 3} times", array1[i], array2[i]);
+		int[,] array = new int[rows, columns];
+		for (int i = 0; i < rows; i++)
+		{
+			for (int j = 0; j < columns; j++)
+			{
+				array[i, j] = new Random().Next(min, max);
+			}
+		}
+		return array;
 	}
-}
+
+
+void PrintArray(int[,] array)
+	{
+		for (int i = 0; i < array.GetLength(0); i++)
+		{
+			for (int j = 0; j < array.GetLength(1); j++)
+			{
+				Write("{0, 5}", array[i, j] + " ");
+			}
+			WriteLine();
+		}
+	}
+
     }
 }
