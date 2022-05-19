@@ -115,8 +115,8 @@ public class MyMethods
 	/// <Summary>
 	/// сортировка в двух массивах
 	///</Summary>
-	/// <param> name="array"> одномерный массив</param>
-	/// <returns>одномерный отсортированный массив</returns>
+	/// <param> name="countArray"> одномерный массив</param>
+	/// <param> name="numArray"> одномерный массив</param>
 	public static void SortTwoArrays(int[] countArray, int[] numArray)
 	{
 		int max;
@@ -142,7 +142,6 @@ public class MyMethods
 	/// группировка одинаковых чисел
 	///</Summary>
 	/// <param> name="array"> одномерный массив</param>
-	/// <returns>одномерный отсортированный массив</returns>
 	public static void SortArray(int[] array)
 	{
 		int max;
