@@ -189,6 +189,7 @@ public class MyMethods
 		int temp = 0;
 		for (int j = 0; j < array.GetLength(1); j++)
 		{
+			temp = array[0, j];
 			array[0, j] = array[array.GetLength(0) - 1, j];
 			array[array.GetLength(0) - 1, j] = temp;
 		}
