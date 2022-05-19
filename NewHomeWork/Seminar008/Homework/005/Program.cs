@@ -19,6 +19,7 @@ public class Program
 		int[,] array = new int[4, 4];
 
 		PrintArray(array);
+		WriteLine();
 		PrintArray(FillArray(array));
 
 
