@@ -18,38 +18,47 @@ public class Program
 	{
 		int[,] array = new int[4, 4];
 
+		FillArray(array);
 		PrintArray(array);
-		WriteLine();
-		PrintArray(FillArray(array));
 
 
-		int[,] FillArray(int[,] array)
+		void FillArray(int[,] array)
 		{
-			int n = array.GetLength(0);
-			int m = array.GetLength(1);
+			int x = 0;
+			int y = 0;
+			int count = 1;
 
-			int rows = 0;
-			int columns = 0;
-			int dx = 1;
-			int dy = 0;
-			int dirChanges = 0;
-			int visits = m;
 
-			for (int i = 0; i < array.Length; i++)
+			while (count <= array.Length)
 			{
-				array[rows, columns] = i + 1;
-				if (--visits == 0)
+				while (array[x, y] == 0)
 				{
-					visits = m * (dirChanges % 2) + n * ((dirChanges + 1) % 2) - (dirChanges / 2 - 1) - 2;
-					int temp = dx;
-					dx = -dy;
-					dy = temp;
-					dirChanges++;
+					array[x, y] = count++;
+					if (y + 1 < array.GetLength(1) && array[x, (y + 1)] == 0) y++;
 				}
-				columns += dx;
-				rows += dy;
+				x++;
+
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (x + 1 < array.GetLength(0) && array[x + 1, y] == 0) x++;
+				}
+				y = y - 1;
+
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (y - 1 >= 0 && array[x, y - 1] == 0) y = y - 1;
+				}
+				x = x - 1;
+
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (x - 1 >= 0 && array[x - 1, y] == 0) x = x - 1;
+				}
+				y++;
 			}
-			return array;
 		}
 
 
