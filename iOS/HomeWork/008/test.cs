@@ -1,111 +1,77 @@
+//
+/*
+Задача 62. Заполните спирально массив 4 на 4.
+
+Например, на выходе получается вот такой массив:
+
+1 2 3 4
+12 13 14 5
+11 16 15 6
+10 9 8 7
+*/
+
 using System;
 using static System.Console;
 public class Program
 {
-    static public void Main ()
-    {
-
-int[,] array = new int[4, 4];
-
-PrintArray(array);
-
-Fil(array);
-
-PrintArray(array);
-
-FillArray(array);
-
-PrintArray(array);
-
-void FillArray(int[,] array)
-{
-	int n = 0;
-	int x = 0;
-	int y = 0;
-	int count = 14;
-	int lengthRows = array.GetLength(0);
-	int lengthColumns = array.GetLength(1);
-	int length = array.GetLength(0) * array.GetLength(1);
-	
-	while(count < length)
+	static public void Main()
 	{
-	if (n == 0)
-	{
-		while(array[x, y] == -1)
-		{
-			array[x, y] = count++;
-			if (array[x, y + 1] == -1) y++;
-		}
-		x++;
-		n = 1;
-	}
-	
-	else if (n == 1)
-	{
-		while(array[x, y] == -1)
-		{
-			array[x, y] = count++;
-			if (array[x + 1, y] == -1) x++;
-		}
-		y = y - 1;
-		n = 2;
-	}
-	
-	else if (n == 2)
-	{	
-		while(array[x, y] == -1)
-		{
-			array[x, y] = count++;
-			if (array[x, y - 1] == -1) y = y - 1;
-		}
-		x = x - 1;
-		n = 3;
-	}
-	
-	else if (n == 3)
-	{
-		while(array[x, y] == -1)
-		{
-			array[x, y] = count++;
-			if (array[x - 1, y] == -1) x = x - 1;
-		}
-		y++;
-		n = 0;
-	}
-	
-	}
-}
+		int[,] array = new int[4, 4];
+
+		FillArray(array);
+		PrintArray(array);
 
 
-
-void Fil(int[,] array)
-{
-	for (int i = 0; i < array.GetLength(0); i++)
+		void FillArray(int[,] array)
 		{
-			for (int j = 0; j < array.GetLength(1); j++)
+			int x = 0;
+			int y = 0;
+			int count = 1;
+
+
+			while (count <= array.Length)
 			{
-				array[i, j] = -1;
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (y + 1 < array.GetLength(1) && array[x, (y + 1)] == 0) y++;
+				}
+				x++;
+
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (x + 1 < array.GetLength(0) && array[x + 1, y] == 0) x++;
+				}
+				y = y - 1;
+
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (y - 1 >= 0 && array[x, y - 1] == 0) y = y - 1;
+				}
+				x = x - 1;
+
+				while (array[x, y] == 0)
+				{
+					array[x, y] = count++;
+					if (x - 1 >= 0 && array[x - 1, y] == 0) x = x - 1;
+				}
+				y++;
+			}
+		}
+
+
+		void PrintArray(int[,] array)
+		{
+			for (int i = 0; i < array.GetLength(0); i++)
+			{
+				for (int j = 0; j < array.GetLength(1); j++)
+				{
+					Write("{0, 5}", array[i, j] + " ");
+				}
+				WriteLine();
 			}
 		}
 	}
-
-
-
-
-
-
-void PrintArray(int[,] array)
-	{
-		for (int i = 0; i < array.GetLength(0); i++)
-		{
-			for (int j = 0; j < array.GetLength(1); j++)
-			{
-				Write("{0, 5}", array[i, j] + " ");
-			}
-			WriteLine();
-		}
-	}
-
-
-    }
 }
