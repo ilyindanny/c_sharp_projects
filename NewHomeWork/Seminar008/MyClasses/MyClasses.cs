@@ -4,6 +4,64 @@ using static System.Console;
 public class MyMethods
 {
 	/// <Summary>
+	/// удаление столбца и строки, пересекающихся с координатами минимального числа
+	///</Summary>
+	/// <param> name="array"> двумерный массив</param>
+	/// <param> name="coord"> одномерный массив</param>
+	/// <returns>новый массив с удаленными строкой и столбцом</returns>
+	public static int[,] DeleteRowAndColumn(int[,] array, int[] coord)
+	{
+		int[,] newArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
+		int k = 0;
+		int l = 0;
+
+		for (int i = 0; i < array.GetLength(0); i++)
+		{
+			if (i != coord[0])
+			{
+				for (int j = 0; j < array.GetLength(1); j++)
+				{
+					if (j != coord[1])
+					{
+						newArray[k, l] = array[i, j];
+						l++;
+					}
+				}
+				l = 0;
+				k++;
+			}
+		}
+		return newArray;
+	}
+
+
+	/// <Summary>
+	/// поиск минимального (первого попавшегося)
+	///</Summary>
+	/// <param> name="array"> одномерный массив</param>
+	/// <returns>массив с координатами минимального числа</returns>
+	public static int[] FindMin(int[,] array)
+	{
+		int[] coord = { 0, 0 };
+		int min = array[coord[0], coord[1]];
+
+		for (int i = 0; i < array.GetLength(0) - 1; i++)
+		{
+			for (int j = 0; j < array.GetLength(1) - 1; j++)
+			{
+				if (array[i, j] < min)
+				{
+					coord[0] = i;
+					coord[1] = j;
+					min = array[coord[0], coord[1]];
+				}
+			}
+		}
+		return coord;
+	}
+
+
+	/// <Summary>
 	/// создать строку с количеством повторений цифр
 	///</Summary>
 	/// <param> name="array"> одномерный массив</param>
