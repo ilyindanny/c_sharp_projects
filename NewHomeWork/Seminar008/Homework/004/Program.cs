@@ -1,4 +1,4 @@
-﻿//
+//
 /*
 Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 массив размером 2 x 2 x 2
@@ -50,11 +50,11 @@ public class Program
 					for(int k = 0; k < array.GetLength(2); k++)
 					{
 						x = new Random().Next(0, array.GetLength(0));
-					y = new Random().Next(0, array.GetLength(1));
-					z = new Random().Next(0, array.GetLength(2));
-					temp = array[i, j, k];
-					array[i, j, k] = array[x, y, z];
-					array[x, y, z] = temp;
+						y = new Random().Next(0, array.GetLength(1));
+						z = new Random().Next(0, array.GetLength(2));
+						temp = array[i, j, k];
+						array[i, j, k] = array[x, y, z];
+						array[x, y, z] = temp;
 					}
 				}
 			}
