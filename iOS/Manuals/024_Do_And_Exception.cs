@@ -50,7 +50,7 @@ static public double GetDouble(string b)
 	}
 	catch
 	{
-		WriteLine("broken");
+		WriteLine("broken number");
 	}
 	}
 	while (Double.IsNaN(result));
