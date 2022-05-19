@@ -73,7 +73,6 @@ public class Program
 					}
 					WriteLine("\n");
 				}
-				
 			}
 		}
 	}
