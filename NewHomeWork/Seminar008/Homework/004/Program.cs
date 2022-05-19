@@ -12,7 +12,8 @@ public class Program
 {
 	static public void Main()
 	{
-		int[,,] array = GetArray(2, 2, 4);
+		int[,,] array = GetArray(2, 2, 2);
+		ShuffleArray(array);
 		PrintArray(array);
 
 
@@ -32,6 +33,31 @@ public class Program
 				}
 			}
 			return array;
+		}
+		
+		
+		void ShuffleArray(int[,,] array)
+		{
+			int x;
+			int y;
+			int z;
+			int temp;
+
+			for(int i = 0; i < array.GetLength(0); i++)
+			{
+			for(int j = 0; j < array.GetLength(1); j++)
+				{
+					for(int k = 0; k < array.GetLength(2); k++)
+					{
+						x = new Random().Next(0, array.GetLength(0));
+					y = new Random().Next(0, array.GetLength(1));
+					z = new Random().Next(0, array.GetLength(2));
+					temp = array[i, j, k];
+					array[i, j, k] = array[x, y, z];
+					array[x, y, z] = temp;
+					}
+				}
+			}
 		}
 
 
