@@ -24,8 +24,8 @@ public class Program
 {
 	static public void Main()
 	{
-		int[,] array1 = GetArray(5, 5, 1, 10);
-		int[,] array2 = GetArray(5, 5, 1, 10);
+		int[,] array1 = GetArray(5, 3, 1, 10);
+		int[,] array2 = GetArray(3, 5, 1, 10);
 
 		PrintArray(array1);
 		WriteLine();
@@ -37,12 +37,16 @@ public class Program
 
 		int[,] ProductArrays(int[,] array1, int[,] array2)
 		{
-			int[,] newArray = new int[array1.GetLength(0), array1.GetLength(1)];
+		
+			int[,] newArray = new int[array1.GetLength(0), array2.GetLength(1)];
 			for (int i = 0; i < array1.GetLength(0); i++)
 			{
-				for (int j = 0; j < array1.GetLength(1); j++)
+				for (int j = 0; j < array2.GetLength(1); j++)
 				{
-					newArray[i, j] = array1[i, j] * array2[i, j];
+					for (int k = 0; k < array1.GetLength(1); k++)
+					{
+						newArray[i, j] += array1[i, k] * array2[k, j];
+					}
 				}
 			}
 			return newArray;
